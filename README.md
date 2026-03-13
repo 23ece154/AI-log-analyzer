@@ -12,7 +12,7 @@ The system analyzes uploaded logs, masks sensitive data, and uses AI to identify
 * 🔍 Detect root cause of errors
 * 💡 Suggest possible fixes
 * 🔒 Sensitive data masking (emails, API keys, tokens, database URLs)
-* 📊 Used SQLite to reduce the number of API Calls
+* 📊 SQLite caching to reduce repeated AI API calls
 * ⚡ Fast log processing
 * 🔍 Advanced log filtering and search
 
@@ -20,7 +20,7 @@ The system analyzes uploaded logs, masks sensitive data, and uses AI to identify
 
 # 🛠 Tech Stack
 
-### Frontend
+## Frontend
 
 * React (Vite)
 * CSS
@@ -28,14 +28,14 @@ The system analyzes uploaded logs, masks sensitive data, and uses AI to identify
 * React Router
 * React Icons
 
-### Backend
+## Backend
 
 * Node.js
 * Express.js
 * MongoDB
 * Mongoose
 
-### AI Integration
+## AI Integration
 
 * Groq LLM API
 
@@ -43,9 +43,21 @@ The system analyzes uploaded logs, masks sensitive data, and uses AI to identify
 
 # 🏗 System Architecture
 
-User → Upload Logs → Backend Processing →
-Sensitive Data Masking → Search in SQLite DB -> If already exist returns the stored AI Insights -> if new log file -> AI Analysis → Results Dashboard
-
+User
+ ↓
+Upload Logs
+ ↓
+Backend Processing
+ ↓
+Sensitive Data Masking
+ ↓
+Search SQLite Cache
+ ↓
+Existing Error?
+ ├─ Yes → Return Cached AI Insight
+ └─ No  → Send to Groq AI → Store Result
+ ↓
+Dashboard Result
 ---
 
 # 📸 Screenshots
@@ -64,11 +76,11 @@ Sensitive Data Masking → Search in SQLite DB -> If already exist returns the s
 
 ### AI Analysis Result
 
-![Analysis]("C:\Users\sri karthika\Pictures\Screenshots\analysis.png")
+![Analysis](screenshots/analysis.png)
 
 ---
 
-# ⚙ Installation
+# ⚙ Installation (Manual Setup)
 
 ## 1️⃣ Clone the repository
 
@@ -93,7 +105,7 @@ cd backend
 npm install
 ```
 
-Main backend packages used:
+Main backend packages:
 
 * express
 * mongoose
@@ -104,12 +116,6 @@ Main backend packages used:
 * multer
 * axios
 
-Example install command:
-
-```bash
-npm install express mongoose cors dotenv jsonwebtoken bcryptjs multer axios
-```
-
 ---
 
 ## 4️⃣ Install Frontend Dependencies
@@ -119,19 +125,13 @@ cd ../frontend
 npm install
 ```
 
-Main frontend packages used:
+Main frontend packages:
 
 * react
 * react-dom
 * react-router-dom
 * axios
 * react-icons
-
-Example:
-
-```bash
-npm install axios react-router-dom react-icons
-```
 
 ---
 
@@ -166,10 +166,52 @@ cd frontend
 npm run dev
 ```
 
-The app will run at:
+Open:
 
 ```
 http://localhost:5173
+```
+
+---
+
+# 🐳 Run with Docker (Recommended)
+
+## 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/23ece154/AI-log-analyzer.git
+```
+
+---
+
+## 2️⃣ Navigate to project folder
+
+```bash
+cd AI-log-analyzer
+```
+
+---
+
+## 3️⃣ Start the containers
+
+```bash
+docker compose up --build
+```
+
+---
+
+## 4️⃣ Open the application
+
+Frontend
+
+```
+http://localhost:5173
+```
+
+Backend API
+
+```
+http://localhost:5000
 ```
 
 ---
@@ -192,14 +234,13 @@ AI-log-analyzer
 │   ├── pages
 │   └── styles
 │
-└── README.md
+├── docker-compose.yml
+├── README.md
 ```
 
 ---
 
 # 🔮 Future Enhancements
-
-Some improvements planned for future versions:
 
 * 🔴 Real-time log monitoring
 * 📊 Log analytics dashboard
@@ -208,7 +249,6 @@ Some improvements planned for future versions:
 * 📂 Multi-file log analysis
 * 🧠 AI chat assistant for logs
 * ☁ Cloud log storage support
-
 
 ---
 
