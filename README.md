@@ -64,7 +64,7 @@ Sensitive Data Masking → Search in SQLite DB -> If already exist returns the s
 
 ### AI Analysis Result
 
-![Analysis](screenshots/analysis.png)
+![Analysis]("C:\Users\sri karthika\Pictures\Screenshots\analysis.png")
 
 ---
 
