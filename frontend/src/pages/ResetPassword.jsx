@@ -73,7 +73,7 @@ e.preventDefault();
 try{
 
 await axios.post(
-`http://localhost:5000/api/auth/reset-password/${token}`,
+`https://ai-log-analyzer-mc45.onrender.com/api/auth/reset-password/${token}`,
 {password}
 );
 
