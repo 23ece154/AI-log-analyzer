@@ -160,3 +160,24 @@ height:100vh;
 flex:1;
 overflow-y:auto;
 }
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.logout-btn:hover {
+  color: #d9534f; /* red on hover */
+}
