@@ -43,11 +43,21 @@ The system analyzes uploaded logs, masks sensitive data, and uses AI to identify
 
 # 🏗 System Architecture
 
-User → Upload Logs → Backend Processing →
-Sensitive Data Masking → Search in SQLite DB →
-If already exists → Return stored AI insights →
-If new log → AI analysis → Results dashboard
-
+User
+ ↓
+Upload Logs
+ ↓
+Backend Processing
+ ↓
+Sensitive Data Masking
+ ↓
+Search SQLite Cache
+ ↓
+Existing Error?
+ ├─ Yes → Return Cached AI Insight
+ └─ No  → Send to Groq AI → Store Result
+ ↓
+Dashboard Result
 ---
 
 # 📸 Screenshots
