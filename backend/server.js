@@ -9,9 +9,8 @@ const authRoutes = require("./routes/authRoutes");
 const app = express();
 
 app.use(cors({
-  origin: "https://ai-log-analyzer-one.vercel.app", // your frontend deployed URL
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true // only if you send cookies or auth headers
+  origin: ["http://localhost:5173", "https://ai-log-analyzer-one.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 
 app.use(express.json());
