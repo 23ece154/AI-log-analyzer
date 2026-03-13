@@ -9,27 +9,23 @@ const authRoutes = require("./routes/authRoutes");
 const app = express();
 
 const allowedOrigins = [
-  "http://localhost:5173", // local dev
-  "https://ai-log-analyzer-one.vercel.app", // production frontend
-  "https://ai-log-analyzer-1oc2jqvj0-sri-karthikas-projects.vercel.app" // preview deployment
+  "http://localhost:5173",
+  "https://ai-log-analyzer-one.vercel.app",
+  "https://ai-log-analyzer-1oc2jqvj0-sri-karthikas-projects.vercel.app"
 ];
 
 app.use(cors({
-  origin: function(origin, callback){
-    // allow requests with no origin (like Postman)
-    if(!origin) return callback(null, true);
-    if(allowedOrigins.indexOf(origin) === -1){
-      const msg = `The CORS policy for this site does not allow access from the specified Origin.`;
-      return callback(new Error(msg), false);
+  origin: function(origin, callback) {
+    if (!origin) return callback(null, true); // allow Postman, etc.
+    if (allowedOrigins.indexOf(origin) === -1) {
+      return callback(new Error("CORS not allowed"), false);
     }
     return callback(null, true);
   },
-  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 
-// Handle preflight OPTIONS request automatically
-app.options("*", cors());
 
 app.use(express.json());
 
