@@ -1,0 +1,113 @@
+.landing{
+background:#f5f6fa;
+min-height:100vh;
+font-family:Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:20px;
+font-weight:600;
+}
+
+/* NAV BUTTONS */
+
+.nav-buttons{
+display:flex;
+gap:12px;
+}
+
+.nav-btn{
+padding:8px 18px;
+border-radius:6px;
+border:1px solid #6c7ae0;
+background:white;
+color:#6c7ae0;
+cursor:pointer;
+}
+
+.nav-btn.primary{
+background:#6c7ae0;
+color:white;
+border:none;
+}
+
+/* HERO SECTION */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px 100px;
+gap:60px;
+}
+
+/* LEFT CONTENT */
+
+.hero-left{
+max-width:520px;
+}
+
+.hero-left h1{
+font-size:48px;
+margin-bottom:20px;
+color:#6c7ae0;
+}
+
+.hero-left p{
+font-size:17px;
+line-height:1.7;
+color:#555;
+margin-bottom:28px;
+text-align: justify;
+}
+
+/* BUTTON FIX */
+
+.primary-btn{
+background:#6c7ae0;
+color:white;
+border:none;
+padding:10px 25px;
+border-radius: 5px;
+cursor:pointer;
+font-size:16px;
+display:inline-block;
+width:auto;
+}
+
+/* IMAGE */
+
+.hero-right img{
+width:480px;
+max-width:100%;
+}
+
+.highlight{
+color:#7a2df6;
+}
+
+.tagline{
+font-size:20px;
+margin-top:8px;
+margin-bottom:18px;
+color:#444;
+font-weight:500;
+}
+
+.hero-left p{
+line-height:1.7;
+font-size:16px;
+color:#555;
+max-width:520px;
+}

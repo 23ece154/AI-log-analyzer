@@ -1,0 +1,162 @@
+/* Dashboard.css - auth.css style clean theme */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f3f7;
+    margin: 0;
+    padding: 0;
+    color: #111;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+}
+
+.container {
+    background: white;
+    width: 400px;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.upload-box {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.input-group input[type="file"] {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: #6c7ae0;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.primary-btn:hover {
+    opacity: 0.9;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    gap: 5px;
+}
+
+.stats div {
+    flex: 1;
+    text-align: center;
+}
+
+#searchBox {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+}
+
+.error-card {
+    background: #f9f9f9;
+    border-left: 5px solid black;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.error {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.analysis {
+    background: #eeeeee;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: white;
+    margin-left: auto;
+}
+
+.critical { background: #d90429; }
+.high { background: #f77f00; }
+.medium { background: #fcbf49; color: black; }
+.low { background: #2a9d8f; }
+
+#topErrors {
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.top-error {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.react-icon {
+    color: #6c7ae0;
+    font-size: 18px;
+}
+
+.dashboard-layout{
+display:flex;
+height:100vh;
+}
+
+.dashboard-wrapper{
+flex:1;
+overflow-y:auto;
+}

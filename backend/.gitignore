@@ -1,0 +1,24 @@
+# environment variables
+.env
+
+# node dependencies
+node_modules/
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# build folders
+dist/
+build/
+
+# docker
+.dockerignore
+
+# optional
+coverage/
