@@ -249,7 +249,6 @@ AI-log-analyzer
 * 🔔 Alert system for critical errors
 * 📂 Multi-file log analysis
 * 🧠 AI chat assistant for logs
-* ☁ Cloud log storage support
 
 ---
 
